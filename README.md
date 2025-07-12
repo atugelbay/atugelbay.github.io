@@ -48,7 +48,7 @@ ASCII-ART-WEB/                  ← корень проекта (go.mod)
 ### 1. Клонировать репозиторий и перейти в папку
 ```bash
 git clone https://github.com/atugelbay/atugelbay.github.io.git
-cd ascii-art-web
+cd atugelbay.github.io
 ```
 
 ### 2. Установить зависимости
