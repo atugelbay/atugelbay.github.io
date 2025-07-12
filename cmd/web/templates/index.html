@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>ASCII Art Web</title>
+  <link rel="stylesheet" href="/statics/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <video autoplay muted loop id="myVideo">
+    <source src="/statics/bgvideo.mp4" type="video/mp4">
+    Browser doesn't support video.
+  </video>
+  <div class="mainCont glass">
+    <h1>ASCII Art Generator</h1>
+    <form action="/ascii-art" method="post">
+      <label class="lbl">
+        Enter your text:<br/><br/>
+      </label>
+      <textarea name="inputText" maxlength="10000">{{.InputText}}</textarea>
+      <br/><br/>
+      <label class="lbl">Template:</label><br/>
+      {{range .Templates}}
+        <input type="radio" id="tmpl_{{.}}" style="cursor: pointer;" name="template" value="{{.}}"
+          {{if eq . $.Selected}}checked{{end}}>
+        <label for="tmpl_{{.}}" style="cursor: pointer;">{{.}}</label><br/>
+      {{end}}
+      <br/>
+      <button type="submit" class="myBtn">Generate</button>
+    </form>
+    <h2>Result:</h2>
+    <pre style="height: 11em;">{{.RenderedASCII}}</pre>
+  </div>
+</body>
+</html>
