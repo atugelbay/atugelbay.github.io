@@ -47,7 +47,7 @@ ASCII-ART-WEB/                  ← корень проекта (go.mod)
 
 ### 1. Клонировать репозиторий и перейти в папку
 ```bash
-git clone https://01.tomorrow-school.ai/git/USERNAME/ascii-art-web.git
+git clone https://github.com/atugelbay/atugelbay.github.io.git
 cd ascii-art-web
 ```
 
